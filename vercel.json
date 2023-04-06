@@ -1,7 +1,11 @@
+// vercel-django-example/vercel.json
+// https://github.com/jayhale/vercel-django-example/blob/main/vercel.json#L1
+
 {
     "builds": [{
         "src": "mac/wsgi.py",
-        "config":  "maxLambdaSize": "15mb" }
+        "use": "@ardnt/vercel-python-wsgi",
+        "config": { "maxLambdaSize": "15mb" }
     }],
     "routes": [
         {
